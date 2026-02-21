@@ -1,11 +1,46 @@
-<div align="center">
+# PB Creative Invoice Manager
 
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+A professional invoice generation system built with React, TypeScript, and Firebase.
 
-  <h1>Built with AI Studio</h2>
+## Prerequisites
 
-  <p>The fastest path from prompt to production with Gemini.</p>
+Before running this project on your MacBook, ensure you have the following installed:
 
-  <a href="https://aistudio.google.com/apps">Start building</a>
+*   **Node.js** (Version 16 or higher) - [Download Here](https://nodejs.org/)
+*   **VS Code** (Recommended Editor) - [Download Here](https://code.visualstudio.com/)
 
-</div>
+## Installation Guide
+
+1.  Open your **Terminal**.
+2.  Navigate to this project folder.
+3.  Run the following command to install all dependencies:
+    ```bash
+    npm install
+    ```
+
+## Setting up the Database (Firebase)
+
+To save invoices to the cloud, you need a Firebase project.
+
+1.  Go to [Firebase Console](https://console.firebase.google.com/).
+2.  Create a new project (e.g., "pb-invoices").
+3.  Navigate to **Build > Firestore Database** and click **Create Database**.
+    *   Select **Start in Test Mode**.
+    *   *Why Test Mode?* It allows your app to write data without setting up complex security rules or login systems immediately. Perfect for local tools.
+4.  Go to **Project Settings** (Gear icon) > **General**.
+5.  Scroll down to "Your apps" and click the web icon (</>) to create a web app.
+6.  Copy the `firebaseConfig` object provided.
+7.  Open the file `firebaseConfig.ts` in this project and paste your keys there.
+
+## Running the App
+
+Once installed, start the application by running:
+
+```bash
+npm run dev
+```
+
+Open your browser and go to the link shown in the terminal (usually `http://localhost:5173`).
+
+## Offline Mode
+If you don't set up Firebase, the app will work in **Offline Mode** and save data to your browser's Local Storage.
